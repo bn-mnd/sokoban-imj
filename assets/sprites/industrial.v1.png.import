@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwusvikmaylgu"
-path="res://.godot/imported/scifi-platformer-player.png-47db953a599e080c16b9e2dad5a3c85d.ctex"
+uid="uid://bsdon7wn504ku"
+path="res://.godot/imported/industrial.v1.png-51dc0ddf3a17bc8bbdd179d088c031c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/playable/scifi-platformer-player.png"
-dest_files=["res://.godot/imported/scifi-platformer-player.png-47db953a599e080c16b9e2dad5a3c85d.ctex"]
+source_file="res://assets/sprites/industrial.v1.png"
+dest_files=["res://.godot/imported/industrial.v1.png-51dc0ddf3a17bc8bbdd179d088c031c5.ctex"]
 
 [params]
 

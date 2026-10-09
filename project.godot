@@ -11,14 +11,13 @@ config_version=5
 [application]
 
 config/name="sokoban-imj"
-run/main_scene="uid://tx6oyjbiexaw"
+run/main_scene="uid://btu33a4c8vi68"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://assets/img/icon.svg"
 
 [display]
 
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/stretch/mode="viewport"
 
 [physics]
 
