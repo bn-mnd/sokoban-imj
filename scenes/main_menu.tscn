@@ -5,66 +5,67 @@
 [node name="Main Menu" type="Node" unique_id=1953663588]
 
 [node name="title" type="Label" parent="." unique_id=350530573]
-offset_left = 491.0
-offset_top = 189.0
-offset_right = 649.0
-offset_bottom = 237.0
+offset_left = 441.0
+offset_top = 88.0
+offset_right = 716.0
+offset_bottom = 187.0
 theme_override_colors/font_color = Color(0.27342, 0.62, 0.13640001, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 30
 text = "SAMPLE TITLE SCREEN TEXT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="new game" type="Button" parent="." unique_id=1762897421]
-offset_left = 523.0
-offset_top = 239.0
-offset_right = 613.0
-offset_bottom = 262.0
+offset_left = 492.0
+offset_top = 192.0
+offset_right = 645.0
+offset_bottom = 244.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0.34117648, 0.6509804, 0.22745098, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("1_l6cm7")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 30
 text = "new game"
 
 [node name="continue" type="Button" parent="." unique_id=189040673]
-offset_left = 523.0
-offset_top = 266.0
-offset_right = 613.0
-offset_bottom = 291.0
+offset_left = 493.0
+offset_top = 247.0
+offset_right = 645.0
+offset_bottom = 295.0
 theme_override_colors/font_color = Color(0.34016663, 0.65, 0.2275, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("1_l6cm7")
-theme_override_font_sizes/font_size = 13
+theme_override_font_sizes/font_size = 30
 text = "continue"
 
 [node name="quit" type="Button" parent="." unique_id=2010543508]
-offset_left = 525.0
-offset_top = 321.0
-offset_right = 613.0
-offset_bottom = 344.0
+offset_left = 495.0
+offset_top = 353.0
+offset_right = 645.0
+offset_bottom = 413.0
 theme_override_colors/font_color = Color(0.34117648, 0.6509804, 0.22745098, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("1_l6cm7")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 30
 text = "quit game"
 
 [node name="stage select" type="Button" parent="." unique_id=732708181]
-offset_left = 524.0
-offset_top = 294.0
-offset_right = 613.0
-offset_bottom = 317.0
+offset_left = 494.0
+offset_top = 297.0
+offset_right = 645.0
+offset_bottom = 350.0
 theme_override_colors/font_color = Color(0.34117648, 0.6509804, 0.22745098, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("1_l6cm7")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 30
 text = "stage select"
 
 [node name="bgm" type="AudioStreamPlayer" parent="." unique_id=1200378081]
