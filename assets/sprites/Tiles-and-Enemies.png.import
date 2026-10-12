@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch2d7hba0syjl"
-path="res://.godot/imported/bot-player.png-4579b5ad846b9682dcfc1de6810ae615.ctex"
+uid="uid://6m8bq4lnh7p8"
+path="res://.godot/imported/Tiles-and-Enemies.png-994ede7612b231ea6435c0e84247d980.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/bot-player.png"
-dest_files=["res://.godot/imported/bot-player.png-4579b5ad846b9682dcfc1de6810ae615.ctex"]
+source_file="res://assets/sprites/Tiles-and-Enemies.png"
+dest_files=["res://.godot/imported/Tiles-and-Enemies.png-994ede7612b231ea6435c0e84247d980.ctex"]
 
 [params]
 

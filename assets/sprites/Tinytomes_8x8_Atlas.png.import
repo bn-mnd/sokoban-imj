@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://08p603m8p4lh"
-path="res://.godot/imported/gdb-keyboard-2.png-91fd9263c2d54fdc15c18c84142c97a0.ctex"
+uid="uid://dvub27b1hxysy"
+path="res://.godot/imported/Tinytomes_8x8_Atlas.png-d503476c1d82a921f29af7ff47715fb4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ui/gdb-keyboard-2.png"
-dest_files=["res://.godot/imported/gdb-keyboard-2.png-91fd9263c2d54fdc15c18c84142c97a0.ctex"]
+source_file="res://assets/sprites/Tinytomes_8x8_Atlas.png"
+dest_files=["res://.godot/imported/Tinytomes_8x8_Atlas.png-d503476c1d82a921f29af7ff47715fb4.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxknk7kg76w30"
-path="res://.godot/imported/GreyPressedl4.png-53e1cbb2e13a6dc359c2d7d0f15b0033.ctex"
+uid="uid://dd4gxjnxcx1it"
+path="res://.godot/imported/solid-black-bg.png-55fd955c63621341eb037a23c0db67b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ui/GreyPressedl4.png"
-dest_files=["res://.godot/imported/GreyPressedl4.png-53e1cbb2e13a6dc359c2d7d0f15b0033.ctex"]
+source_file="res://assets/sprites/solid-black-bg.png"
+dest_files=["res://.godot/imported/solid-black-bg.png-55fd955c63621341eb037a23c0db67b9.ctex"]
 
 [params]
 
