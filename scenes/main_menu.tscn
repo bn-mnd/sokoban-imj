@@ -1,73 +1,91 @@
 [gd_scene format=3 uid="uid://tx6oyjbiexaw"]
 
+[ext_resource type="Script" uid="uid://dflidcvqlrgju" path="res://scenes/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="FontFile" uid="uid://q8u4p028ccds" path="res://assets/fonts/m6x11plus.ttf" id="1_l6cm7"]
+[ext_resource type="PackedScene" uid="uid://kyhdh3l6mgqh" path="res://scenes/fade_transition.tscn" id="3_bqqt6"]
 
-[node name="Main Menu" type="Node" unique_id=1953663588]
+[node name="Main Menu" type="Node2D" unique_id=130524298]
+script = ExtResource("1_ekxnf")
 
-[node name="title" type="Label" parent="." unique_id=350530573]
-offset_left = 441.0
-offset_top = 88.0
-offset_right = 716.0
-offset_bottom = 187.0
-theme_override_colors/font_color = Color(0.27342, 0.62, 0.13640001, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 3
-theme_override_fonts/font = ExtResource("1_l6cm7")
-theme_override_font_sizes/font_size = 30
-text = "SAMPLE TITLE SCREEN TEXT"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="button-manager" type="Control" parent="." unique_id=1501118611]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="new game" type="Button" parent="." unique_id=1762897421]
-offset_left = 492.0
-offset_top = 192.0
-offset_right = 645.0
-offset_bottom = 244.0
+[node name="start" type="Button" parent="button-manager" unique_id=1762897421]
+layout_mode = 0
+offset_left = 481.0
+offset_top = 231.0
+offset_right = 634.0
+offset_bottom = 283.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_colors/font_color = Color(0.34117648, 0.6509804, 0.22745098, 1)
+theme_override_colors/font_color = Color(0.34117648, 0.6509804, 0.8666667, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 30
-text = "new game"
+text = "start"
 
-[node name="continue" type="Button" parent="." unique_id=189040673]
-offset_left = 493.0
-offset_top = 247.0
-offset_right = 645.0
-offset_bottom = 295.0
-theme_override_colors/font_color = Color(0.34016663, 0.65, 0.2275, 1)
+[node name="options" type="Button" parent="button-manager" unique_id=732708181]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 290.0
+offset_right = 633.0
+offset_bottom = 343.0
+theme_override_colors/font_color = Color(0.34117648, 0.6509804, 0.8901961, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 30
-text = "continue"
+text = "options"
 
-[node name="quit" type="Button" parent="." unique_id=2010543508]
-offset_left = 495.0
+[node name="quit" type="Button" parent="button-manager" unique_id=2010543508]
+layout_mode = 0
+offset_left = 483.0
 offset_top = 353.0
-offset_right = 645.0
+offset_right = 633.0
 offset_bottom = 413.0
-theme_override_colors/font_color = Color(0.34117648, 0.6509804, 0.22745098, 1)
+theme_override_colors/font_color = Color(0.34117648, 0.6509804, 0.8352941, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 30
 text = "quit game"
 
-[node name="stage select" type="Button" parent="." unique_id=732708181]
-offset_left = 494.0
-offset_top = 297.0
-offset_right = 645.0
-offset_bottom = 350.0
-theme_override_colors/font_color = Color(0.34117648, 0.6509804, 0.22745098, 1)
+[node name="title" type="Label" parent="." unique_id=350530573]
+offset_left = 424.0
+offset_top = 142.0
+offset_right = 699.0
+offset_bottom = 241.0
+theme_override_colors/font_color = Color(0.2575576, 0.48997307, 0.9994505, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
+theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 30
-text = "stage select"
+text = "sokoban-img"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="bgm" type="AudioStreamPlayer" parent="." unique_id=1200378081]
 
 [node name="bg" type="Sprite2D" parent="." unique_id=1002873498]
+
+[node name="fade_transition" parent="." unique_id=1169033893 instance=ExtResource("3_bqqt6")]
+visible = false
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 1155.0
+offset_bottom = 648.0
+
+[node name="fade-timer" type="Timer" parent="fade_transition" unique_id=633190358]
+
+[node name="main-menu-camera" type="Camera2D" parent="." unique_id=145244494]
+position = Vector2(571, 284)
+zoom = Vector2(2, 2)
+
+[connection signal="pressed" from="button-manager/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="button-manager/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="button-manager/quit" to="." method="_on_quit_pressed"]
+[connection signal="timeout" from="fade_transition/fade-timer" to="." method="_on_fadetimer_timeout"]

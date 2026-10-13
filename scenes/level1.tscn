@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://btu33a4c8vi68"]
 
 [ext_resource type="Texture2D" uid="uid://dd4gxjnxcx1it" path="res://assets/sprites/solid-black-bg.png" id="1_ejswk"]
+[ext_resource type="Script" uid="uid://uoj517jxxgww" path="res://scenes/level_1.gd" id="1_f31uk"]
 [ext_resource type="Script" uid="uid://cv2upnkqgl4cv" path="res://scripts/player.gd" id="1_ru4tf"]
 [ext_resource type="Texture2D" uid="uid://pni04k12pdy2" path="res://assets/sprites/Itch release raw tileset 01.png" id="2_bbk5w"]
 [ext_resource type="Texture2D" uid="uid://bsdon7wn504ku" path="res://assets/sprites/industrial.v1.png" id="2_ru4tf"]
@@ -11,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://d31htelmsudtu" path="res://assets/sprites/ui/kb_dark_symbols.png" id="9_2ku1j"]
 [ext_resource type="Texture2D" uid="uid://jmhuq8yohfjq" path="res://assets/sprites/ui/kb_dark_alphanumeric.png" id="10_d3jkd"]
 [ext_resource type="Texture2D" uid="uid://cvl4lm52obmwl" path="res://assets/sprites/ui/cursors.png" id="11_u3awl"]
+[ext_resource type="PackedScene" uid="uid://kyhdh3l6mgqh" path="res://scenes/fade_transition.tscn" id="13_gnai3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d3jkd"]
 texture = ExtResource("2_bbk5w")
@@ -380,7 +382,7 @@ sources/0 = SubResource("TileSetAtlasSource_d3jkd")
 sources/1 = SubResource("TileSetAtlasSource_u3awl")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ru4tf"]
-size = Vector2(12, 14)
+size = Vector2(11, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6sh32"]
 atlas = ExtResource("2_ru4tf")
@@ -483,7 +485,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"push",
-"speed": 7.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -512,7 +514,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"run",
-"speed": 10.0
+"speed": 7.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u068y"]
@@ -931,6 +933,7 @@ animations = [{
 }]
 
 [node name="World" type="Node2D" unique_id=2122367450]
+script = ExtResource("1_f31uk")
 
 [node name="bg-color" type="Sprite2D" parent="." unique_id=95290059]
 position = Vector2(576.25, 13)
@@ -975,22 +978,22 @@ tile_map_data = PackedByteArray("AABCACcAAAAEAAoAAABDACcAAAAEAAoAAABEACcAAAAEAAo
 tile_set = SubResource("TileSet_8vsut")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=393291243]
-position = Vector2(530, 391)
+position = Vector2(519, 421)
+motion_mode = 1
 script = ExtResource("1_ru4tf")
 metadata/_edit_group_ = true
 
 [node name="player-collision" type="CollisionShape2D" parent="Player" unique_id=1263082872]
-position = Vector2(-4, 1)
+position = Vector2(-3.5, -4)
 shape = SubResource("RectangleShape2D_ru4tf")
 
 [node name="player-anim" type="AnimatedSprite2D" parent="Player" unique_id=500173703]
-position = Vector2(-2.9999967, -3.500009)
+position = Vector2(-2.9999967, -8.00001)
 scale = Vector2(1.2499995, 1.095237)
 sprite_frames = SubResource("SpriteFrames_03sve")
-animation = &"run"
+animation = &"idle"
 autoplay = "idle"
-frame = 1
-frame_progress = 0.888088
+frame_progress = 0.7023152
 
 [node name="centered-camera" type="Camera2D" parent="." unique_id=1850611906]
 position = Vector2(569, 401)
@@ -1078,7 +1081,7 @@ region_enabled = true
 region_rect = Rect2(67, 99, 10, 10)
 
 [node name="place-box-here2" type="Sprite2D" parent="Map" unique_id=1921948552]
-position = Vector2(617, 408.00003)
+position = Vector2(617, 409.00003)
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("11_u3awl")
 region_enabled = true
@@ -1091,3 +1094,11 @@ animation = &"rotating-coin"
 autoplay = "rotating-coin"
 frame = 3
 frame_progress = 0.20536338
+
+[node name="fade_transition" parent="." unique_id=1169033893 instance=ExtResource("13_gnai3")]
+visible = false
+top_level = true
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 1154.0
+offset_bottom = 648.0
