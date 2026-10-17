@@ -5,14 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://pni04k12pdy2" path="res://assets/sprites/Itch release raw tileset 01.png" id="2_bbk5w"]
 [ext_resource type="Texture2D" uid="uid://cekd0sas5mwi" path="res://assets/sprites/Itch release tileset base 01.png" id="3_conm7"]
 [ext_resource type="FontFile" uid="uid://cg42plr701t1n" path="res://assets/fonts/m6x11.ttf" id="3_d3jkd"]
-[ext_resource type="Texture2D" uid="uid://cixto0l88cwax" path="res://assets/sprites/items/coin_silver.png" id="3_ejswk"]
 [ext_resource type="FontFile" uid="uid://q8u4p028ccds" path="res://assets/fonts/m6x11plus.ttf" id="7_bbk5w"]
 [ext_resource type="Texture2D" uid="uid://2br1qnvo72gh" path="res://assets/sprites/itch-transparent-tileset.png" id="7_gnai3"]
 [ext_resource type="Texture2D" uid="uid://d31htelmsudtu" path="res://assets/sprites/ui/kb_dark_symbols.png" id="9_2ku1j"]
 [ext_resource type="Texture2D" uid="uid://jmhuq8yohfjq" path="res://assets/sprites/ui/kb_dark_alphanumeric.png" id="10_d3jkd"]
 [ext_resource type="Texture2D" uid="uid://cvl4lm52obmwl" path="res://assets/sprites/ui/cursors.png" id="11_u3awl"]
-[ext_resource type="PackedScene" uid="uid://codn2fdq802sv" path="res://scenes/pllayer.tscn" id="13_f31uk"]
+[ext_resource type="PackedScene" uid="uid://codn2fdq802sv" path="res://scenes/player.tscn" id="13_f31uk"]
 [ext_resource type="PackedScene" uid="uid://kyhdh3l6mgqh" path="res://scenes/fade_transition.tscn" id="13_gnai3"]
+[ext_resource type="Texture2D" uid="uid://cbr8ergw114ml" path="res://assets/sprites/ui/crosshairs_tilesheet_white.png" id="13_i8kv5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d3jkd"]
 texture = ExtResource("2_bbk5w")
@@ -803,70 +803,6 @@ animations = [{
 "speed": 2.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_op7ga"]
-atlas = ExtResource("3_ejswk")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q13i1"]
-atlas = ExtResource("3_ejswk")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pylmc"]
-atlas = ExtResource("3_ejswk")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pbfsw"]
-atlas = ExtResource("3_ejswk")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5tmop"]
-atlas = ExtResource("3_ejswk")
-region = Rect2(64, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7ahtn"]
-atlas = ExtResource("3_ejswk")
-region = Rect2(80, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7lmhl"]
-atlas = ExtResource("3_ejswk")
-region = Rect2(96, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dx0e4"]
-atlas = ExtResource("3_ejswk")
-region = Rect2(112, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_8vsut"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_op7ga")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q13i1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pylmc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pbfsw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5tmop")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7ahtn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7lmhl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dx0e4")
-}],
-"loop": 1,
-"name": &"rotating-coin",
-"speed": 8.0
-}]
-
 [node name="World" type="Node2D" unique_id=2122367450]
 script = ExtResource("1_f31uk")
 
@@ -906,6 +842,15 @@ recommencer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="indications2" type="Label" parent="Control" unique_id=1238306630]
+layout_mode = 0
+offset_left = 395.0
+offset_top = 388.0
+offset_right = 439.0
+offset_bottom = 411.0
+theme_override_fonts/font = ExtResource("7_bbk5w")
+text = "touches"
+
 [node name="Tilemap" type="Node2D" parent="." unique_id=504516250]
 
 [node name="sokoban-tilemap-layer" type="TileMapLayer" parent="Tilemap" unique_id=1937552571]
@@ -920,7 +865,7 @@ tile_set = SubResource("TileSet_n08hn")
 tile_map_data = PackedByteArray("AABFADUAAAAEAAMAAABGADUAAAAFAAMAAABGADYAAAABAAUAAABFADYAAAAAAAUAAAA/ADEAAAAEAAMAAABAADEAAAAFAAMAAAA/ADIAAAAAAAUAAABAADIAAAABAAUAAAA=")
 tile_set = SubResource("TileSet_8t6m7")
 
-[node name="Pllayer" parent="." unique_id=523833275 instance=ExtResource("13_f31uk")]
+[node name="Player" parent="." unique_id=523833275 instance=ExtResource("13_f31uk")]
 position = Vector2(580, 466)
 
 [node name="centered-camera" type="Camera2D" parent="." unique_id=1850611906]
@@ -1001,28 +946,6 @@ autoplay = "press-r"
 
 [node name="Map" type="Node2D" parent="." unique_id=1477552746]
 
-[node name="place-box-here" type="Sprite2D" parent="Map" unique_id=751593027]
-position = Vector2(518, 346)
-scale = Vector2(1.2000005, 1.2000005)
-texture = ExtResource("11_u3awl")
-region_enabled = true
-region_rect = Rect2(67, 35, 10, 10)
-
-[node name="place-box-here2" type="Sprite2D" parent="Map" unique_id=1921948552]
-position = Vector2(617.9375, 410)
-scale = Vector2(1.2125012, 1.2249986)
-texture = ExtResource("11_u3awl")
-region_enabled = true
-region_rect = Rect2(67, 35, 10, 10)
-
-[node name="silver-coins" type="AnimatedSprite2D" parent="Map" unique_id=615940109]
-position = Vector2(616, 390)
-sprite_frames = SubResource("SpriteFrames_8vsut")
-animation = &"rotating-coin"
-autoplay = "rotating-coin"
-frame = 3
-frame_progress = 0.20536338
-
 [node name="box-indicators" type="Node2D" parent="Map" unique_id=519703926]
 metadata/_edit_group_ = true
 
@@ -1094,7 +1017,22 @@ flip_v = true
 region_enabled = true
 region_rect = Rect2(37, 6, 5, 5)
 
+[node name="place-box-here" type="Sprite2D" parent="Map" unique_id=325061483]
+position = Vector2(518, 345.5)
+scale = Vector2(0.17857134, 0.19642873)
+texture = ExtResource("13_i8kv5")
+region_enabled = true
+region_rect = Rect2(73, 280, 56, 56)
+
+[node name="place-box-here2" type="Sprite2D" parent="Map" unique_id=1459511691]
+position = Vector2(617, 409)
+scale = Vector2(0.21428601, 0.21428601)
+texture = ExtResource("13_i8kv5")
+region_enabled = true
+region_rect = Rect2(73, 280, 56, 56)
+
 [node name="fade_transition" parent="." unique_id=1169033893 instance=ExtResource("13_gnai3")]
+visible = false
 top_level = true
 offset_left = 1.0
 offset_top = 3.0

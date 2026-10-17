@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://codn2fdq802sv"]
 
 [ext_resource type="Texture2D" uid="uid://bnm6m8nmjaw85" path="res://assets/sprites/Small-8-Direction-Characters_by_AxulArt.png" id="1_1ahwt"]
-[ext_resource type="Script" uid="uid://01uafanvbtew" path="res://scenes/pllayer.gd" id="1_425s6"]
+[ext_resource type="Script" uid="uid://01uafanvbtew" path="res://scenes/player.gd" id="1_425s6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ihwri"]
 atlas = ExtResource("1_1ahwt")
@@ -125,7 +125,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_03sve"]
 size = Vector2(8, 11)
 
-[node name="Pllayer" type="Area2D" unique_id=523833275]
+[node name="Player" type="Area2D" unique_id=523833275]
 script = ExtResource("1_425s6")
 metadata/_edit_group_ = true
 
